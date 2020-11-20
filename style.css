@@ -1,0 +1,105 @@
+:root {
+  --bgcolor: #000000;
+  --containerbgc: #313131;
+  --text: #ffffff;
+  --cell-size: 15vh;
+  --cell-bg-color: #a7a7a7;
+  --btnbgc: #b5b5b5;
+  --btnbgc-active: #828282;
+  --radius : 8px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background-color: var(--bgcolor);
+}
+.container{
+  background-color: var(--containerbgc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14vh;
+
+}
+.message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
+}
+.board{
+  flex-direction: column;
+  align-items: center;
+}
+.row{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.cell{
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background-color: var(--cell-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5vh;
+  font-size: 3em;
+}
+.cell#cell1{
+  border-radius: 0 0 var(--radius) 0;
+}
+.cell#cell2{
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.cell#cell3{
+  border-radius: 0 0 0 var(--radius);
+}
+.cell#cell4{
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.cell#cell5{
+  border-radius: var(--radius) var(--radius) var(--radius) var(--radius);
+}
+.cell#cell6{
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+.cell#cell7{
+  border-radius: 0 var(--radius) 0 0;
+}
+.cell#cell8{
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.cell#cell9{
+  border-radius: var(--radius) 0 0 0;
+}
+.cell:active{
+  transform: scale(0.95);
+}
+#btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btnbgc);
+  width: 20vh;
+  height: 8vh;
+  border-radius: 15px;
+}
+#btn:active{
+  background-color: var(--btnbgc-active);
+  transform: scale(0.95);
+
+}
