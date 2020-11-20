@@ -11,6 +11,7 @@ let inGame = true;
 window.onload = ()=>{
   setSquaresListeners();
   showWhoseTurn();
+  setRestartBtntnListener()
 }
 
 
@@ -153,4 +154,21 @@ function checkIfWon(symbol){
 
 function showWinner(who){
   document.querySelector('#vencedor-selecionado').innerHTML = who
+}
+
+function restart(){
+  console.log('restarting...')
+  showWinner('...')
+  quadrados.forEach(quadrado=>{
+    quadrado.innerHTML = '';
+    quadrado.selected = false;
+  });
+  availableSquares = ['0','1','2','3','4','5','6','7','8'];
+  inGame = true;
+  showWhoseTurn();
+  if(player != 'player'){cpuMove(); player = 'player';}
+}
+
+function setRestartBtntnListener(){
+  document.querySelector('#btn').addEventListener('click', restart)
 }
