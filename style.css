@@ -104,3 +104,6 @@ body{
   transform: scale(0.95);
 
 }
+.win{
+  text-shadow: 2px 2px 5px #ff6600;
+}

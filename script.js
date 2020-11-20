@@ -128,7 +128,7 @@ function checkIfWon(symbol){
   let won = false;
 
   for (let i = 0; i < possibilities.length; i++) {
-    console.log('possibility: ',possibilities[i]);
+    // console.log('possibility: ',possibilities[i]);
     if(possibilities[i] >= 3){
       won = true;
       break;
@@ -138,9 +138,9 @@ function checkIfWon(symbol){
   }
   
 
-  console.log(possibilities);
-  console.log(symbol);
-  console.log(won);
+  // console.log(possibilities);
+  // console.log(symbol);
+  // console.log(won);
   if(won){
     if(symbol == 'X'){
       showWinner('Player Won!')
@@ -153,11 +153,16 @@ function checkIfWon(symbol){
 }
 
 function showWinner(who){
+  if(who == '...'){
+    document.querySelector('#vencedor-selecionado').classList.remove('win');
+  }else{
+    document.querySelector('#vencedor-selecionado').classList.add('win');
+  }
   document.querySelector('#vencedor-selecionado').innerHTML = who
 }
 
 function restart(){
-  console.log('restarting...')
+  // console.log('restarting...')
   showWinner('...')
   quadrados.forEach(quadrado=>{
     quadrado.innerHTML = '';
