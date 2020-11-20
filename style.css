@@ -59,35 +59,35 @@ body{
   margin: 0.5vh;
   font-size: 3em;
 }
-.cell#cell1{
-  border-radius: 0 0 var(--radius) 0;
-}
-.cell#cell2{
-  border-radius: 0 0 var(--radius) var(--radius);
-}
-.cell#cell3{
-  border-radius: 0 0 0 var(--radius);
-}
-.cell#cell4{
-  border-radius: 0 var(--radius) var(--radius) 0;
-}
-.cell#cell5{
-  border-radius: var(--radius) var(--radius) var(--radius) var(--radius);
-}
-.cell#cell6{
-  border-radius: var(--radius) 0 0 var(--radius);
-}
-.cell#cell7{
-  border-radius: 0 var(--radius) 0 0;
-}
-.cell#cell8{
-  border-radius: var(--radius) var(--radius) 0 0;
-}
-.cell#cell9{
-  border-radius: var(--radius) 0 0 0;
-}
 .cell:active{
   transform: scale(0.95);
+}
+.cell#cell_1{
+  border-radius: 0 0 var(--radius) 0;
+}
+.cell#cell_2{
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.cell#cell_3{
+  border-radius: 0 0 0 var(--radius);
+}
+.cell#cell_4{
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.cell#cell_5{
+  border-radius: var(--radius) var(--radius) var(--radius) var(--radius);
+}
+.cell#cell_6{
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+.cell#cell_7{
+  border-radius: 0 var(--radius) 0 0;
+}
+.cell#cell_8{
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.cell#cell_9{
+  border-radius: var(--radius) 0 0 0;
 }
 #btn{
   display: flex;
